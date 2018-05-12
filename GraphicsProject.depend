@@ -1,0 +1,154 @@
+# depslib dependency file v1.0
+1525433555 source:d:\              informatika\code\beadando2\kit\examplecheckbox.cpp
+	"examplecheckbox.hpp"
+	"graphics.hpp"
+
+1522136500 d:\              informatika\code\beadando2\kit\examplecheckbox.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1488260528 d:\              informatika\code\beadando2\kit\include\graphics.hpp
+	<string>
+
+1523822917 d:\              informatika\code\beadando2\kit\widgets.hpp
+	"graphics.hpp"
+	<string>
+	<string.h>
+	<iostream>
+	<cstdlib>
+
+1524480488 source:d:\              informatika\code\beadando2\kit\focusedcheckbox.cpp
+	"FocusedCheckBox.hpp"
+	"graphics.hpp"
+	<string>
+	<string.h>
+	<iostream>
+	<cstdlib>
+
+1524480408 d:\              informatika\code\beadando2\kit\focusedcheckbox.hpp
+	"examplecheckbox.hpp"
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<vector>
+
+1525435668 source:d:\              informatika\code\beadando2\kit\map.cpp
+	"map.hpp"
+	"graphics.hpp"
+
+1525433193 d:\              informatika\code\beadando2\kit\map.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1525265894 source:d:\              informatika\code\beadando2\kit\numberchanger.cpp
+	"numberchanger.hpp"
+	"graphics.hpp"
+	<string>
+	<sstream>
+
+1525265503 d:\              informatika\code\beadando2\kit\numberchanger.hpp
+	"numberchanger.hpp"
+	"widgets.hpp"
+
+1526168691 source:d:\              informatika\code\beadando2\kit\pushbutton.cpp
+	"PushButton.hpp"
+	"graphics.hpp"
+	<iostream>
+	<time.h>
+	<math.h>
+
+1526168718 d:\              informatika\code\beadando2\kit\pushbutton.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1526168318 source:d:\              informatika\code\beadando2\kit\tankwidget.cpp
+	"TankWidget.hpp"
+	"graphics.hpp"
+	<math.h>
+	<iostream>
+	<ctime>
+	<time.h>
+	<string>
+	<sstream>
+
+1525701883 d:\              informatika\code\beadando2\kit\tankwidget.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1526168676 source:d:\              informatika\code\beadando2\kit\jatekmester.cpp
+	"JatekMester.hpp"
+	"graphics.hpp"
+	"TextBox.hpp"
+	"FocusedCheckBox.hpp"
+	"vButton.hpp"
+	"TankWidget.hpp"
+	"numberchanger.hpp"
+	"map.hpp"
+	<vector>
+	<string>
+	<iostream>
+
+1526164092 d:\              informatika\code\beadando2\kit\jatekmester.hpp
+	"Window.hpp"
+	"graphics.hpp"
+	<string>
+
+1524493201 d:\              informatika\code\beadando2\kit\window.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+	<vector>
+	<string>
+
+1524490682 d:\              informatika\code\beadando2\kit\textbox.hpp
+	"examplecheckbox.hpp"
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<vector>
+
+1524493370 d:\              informatika\code\beadando2\kit\vbutton.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+	"PushButton.hpp"
+	"Window.hpp"
+
+1524479936 source:d:\              informatika\code\beadando2\kit\textbox.c
+
+1525436335 source:d:\              informatika\code\beadando2\kit\textbox.cpp
+	"TextBox.hpp"
+	"graphics.hpp"
+	<string>
+	<string.h>
+	<iostream>
+	<cstdlib>
+
+1524495192 source:d:\              informatika\code\beadando2\kit\vbutton.cpp
+	"vButton.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1523626512 source:d:\              informatika\code\beadando2\kit\widgets.cpp
+	"widgets.hpp"
+	"graphics.hpp"
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<sstream>
+	<vector>
+
+1525698984 source:d:\              informatika\code\beadando2\kit\window.cpp
+	"graphics.hpp"
+	"Window.hpp"
+
+1526164128 source:d:\              informatika\code\beadando2\kit\main.cpp
+	"graphics.hpp"
+	"widgets.hpp"
+	"numberchanger.hpp"
+	"FocusedCheckBox.hpp"
+	"examplecheckbox.hpp"
+	"TextBox.hpp"
+	"JatekMester.hpp"
+	<vector>
+	<fstream>
+	<math.h>
+
