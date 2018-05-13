@@ -2,13 +2,14 @@
 #define TEXTBOX_H
 
 #include "examplecheckbox.hpp"
+#include "widgets.hpp"
 #include <string.h>
 #include <iostream>
 #include <cstdlib>
 #include <vector>
 using namespace std;
 
-class TextBox : public ExampleCheckBox
+class TextBox : public Widget
 {
     protected:
         string _tel;
@@ -17,8 +18,7 @@ class TextBox : public ExampleCheckBox
 		TextBox(int x, int y, int sx, int sy);
     virtual void draw() ;
     virtual void handle(genv::event ev);
-   // virtual bool is_focused();
-    virtual void texting(string t);
+    virtual void texting(double t);
 };
 
 

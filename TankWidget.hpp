@@ -13,6 +13,11 @@ protected:
     double ks,wind;
     double av,ev;
     bool b;
+
+    bool vege;
+    int ki;
+    double szell;
+
 public:
     TankWidget(int x, int y, int sx, int sy,int szog,int sp);
     virtual void draw() ;
@@ -25,6 +30,7 @@ public:
     virtual void bul(bool k);
     virtual double x();
     virtual double y();
+    virtual void szello(double ertek);
 
 };
 #endif

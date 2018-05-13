@@ -16,9 +16,8 @@ TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp): Widget(x,y,sx
     sz=(  s/(180/3.141592654));
 
     start=false;
-
-    b=false;
-
+    b=true;
+    vege=false;
 }
 
 void TankWidget::draw()
@@ -50,11 +49,29 @@ void TankWidget::draw()
     av=_x+_size_x/2+ix;
     ev=_y-iy-20;
 
-    gout<<move_to(700,_y-10)<<box(60,10);
+    if(vege==true){
+        if(ki==1){
+            gout<<move_to(300,300)<<color(0,0,0)<<text("Az elsõ játékos nyert!!!:)");
+        }
+        else{
+            gout<<move_to(300,300)<<color(0,0,0)<<text("A második játékos nyert!!!:)");
+        }
+    }
+
+   /* if(b==false){//153, 204, 255
+
+        gout<<move_to(790,100)<<color(0,0,0)<<text("Your turn!");
+        gout<<move_to(50,100)<<color(255,0,0)<<box(80,-20);
+
+    }
+  //  else{
+
+    //    gout<<move_to(50,100)<<color(0,0,0)<<text("Your turn!");
+      //  gout<<move_to(790,100)<<color(153, 204, 255)<<box(80,-20);
+    //}*/
 
 
 }
-
 
 void TankWidget::handle(event ev)
 {
@@ -67,9 +84,8 @@ void TankWidget::handle(event ev)
 
     if(start==true){
 
-        start=false;
 
-        srand(time(0));
+        start=false;
 
         const double rad= 180/3.141592654;
         const double grav=9.81;
@@ -79,7 +95,6 @@ void TankWidget::handle(event ev)
         int ax=xi;
         int ay=yi;
 
-
         double timerr=0;
 
         double c=0.45;
@@ -87,7 +102,7 @@ void TankWidget::handle(event ev)
         double xx=ax;
         double yy=ay;
 
-        double v_l=-10;
+        double v_l=szell;
 
 
         double w=kseb*sin(sz);
@@ -99,6 +114,8 @@ void TankWidget::handle(event ev)
         bool t=false;
 
         gin.timer(1);
+
+        double kezdetix=xx;
 
         while(gin>>ev && t==false){
 
@@ -122,29 +139,45 @@ void TankWidget::handle(event ev)
                 xx=ax+u*timerr-f_x*timerr*timerr;
                 yy=ay-w*timerr+(grav/2)*timerr*timerr+f_y*timerr*timerr;
 
-                if(yy<_y+20){
+                if(yy<_y+20 && yy>0 && xx>0 && xx <900){
                     gout<<move_to(px,py)<<color(153, 204, 255)<<box(10,10);
 
                     gout<<move_to(xx,yy)<<color(77, 77, 51)<<box(10,10);
 
                     gout<<refresh;
-
                 }
                 else{
                     t=true;
-                    wind=rand()%40+30;
                     gin.timer(0);
+
+                    /*if(kezdetix<xx){
+                        b=false;
+                    }
+                    if(kezdetix>xx){
+                        b=true;
+                    }*/
                 }
-        }
 
+                if(xx>=800 && xx<=870 && yy>=350){
+                    ki=1;
+                    vege=true;
+                }
+                if(xx>=30 && xx<=100 && yy>=350){
+                    ki=2;
+                    vege=true;
 
+                }
+            }
 
         }
     }
 
 
+}
 
 
+void TankWidget::szello(double e){
+    szell=e;
 }
 
 bool TankWidget::is_checked()
@@ -154,7 +187,6 @@ bool TankWidget::is_checked()
 
 void TankWidget::Degree(double fok)
 {
-
     sz=fok/(180/3.141592654);
 }
 

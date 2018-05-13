@@ -16,7 +16,7 @@ class numberchanger: public Widget
         int _max,_min;
 
 	public:
-	    numberchanger(int x,int y,int m,int n,int ma,int mi);
+	    numberchanger(int x,int y,int m,int n,int ma,int mi,int k);
 	    virtual bool is_inc(int mouse_x, int mouse_y);
 	    virtual bool is_dec(int mouse_x, int mouse_y);
         virtual void draw();

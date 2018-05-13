@@ -4,11 +4,11 @@ using namespace genv;
 #include <string>
 #include <sstream>
 
-numberchanger::numberchanger(int x, int y, int sx, int sy,int mi,int ma): Widget(x,y,sx,sy)
+numberchanger::numberchanger(int x, int y, int sx, int sy,int mi,int ma,int k): Widget(x,y,sx,sy)
 {
     _checked=false;
     _focus=false;
-    _number=10;
+    _number=k;
     _tolas=0;
     _inc=false;
     _dec=false;

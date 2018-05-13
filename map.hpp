@@ -11,7 +11,10 @@ public:
     Map(int x, int y, int sx, int sy);
     virtual void draw() ;
     virtual void handle(genv::event ev);
-    virtual bool is_checked() ;
+    virtual bool is_checked();
+    virtual double szelgeneral();
+    virtual double szelirany();
+
 };
 
 

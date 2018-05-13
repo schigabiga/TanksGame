@@ -152,3 +152,157 @@
 	<fstream>
 	<math.h>
 
+1525433555 source:c:\users\boldizsár\documents\github\tankwgame\examplecheckbox.cpp
+	"examplecheckbox.hpp"
+	"graphics.hpp"
+
+1522136500 c:\users\boldizsár\documents\github\tankwgame\examplecheckbox.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1488260528 c:\users\boldizsár\documents\github\tankwgame\include\graphics.hpp
+	<string>
+
+1523822917 c:\users\boldizsár\documents\github\tankwgame\widgets.hpp
+	"graphics.hpp"
+	<string>
+	<string.h>
+	<iostream>
+	<cstdlib>
+
+1524480488 source:c:\users\boldizsár\documents\github\tankwgame\focusedcheckbox.cpp
+	"FocusedCheckBox.hpp"
+	"graphics.hpp"
+	<string>
+	<string.h>
+	<iostream>
+	<cstdlib>
+
+1524480408 c:\users\boldizsár\documents\github\tankwgame\focusedcheckbox.hpp
+	"examplecheckbox.hpp"
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<vector>
+
+1526182684 source:c:\users\boldizsár\documents\github\tankwgame\map.cpp
+	"map.hpp"
+	"graphics.hpp"
+	<ctime>
+
+1526178483 c:\users\boldizsár\documents\github\tankwgame\map.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1526182763 source:c:\users\boldizsár\documents\github\tankwgame\numberchanger.cpp
+	"numberchanger.hpp"
+	"graphics.hpp"
+	<string>
+	<sstream>
+
+1526182575 c:\users\boldizsár\documents\github\tankwgame\numberchanger.hpp
+	"numberchanger.hpp"
+	"widgets.hpp"
+
+1526168691 source:c:\users\boldizsár\documents\github\tankwgame\pushbutton.cpp
+	"PushButton.hpp"
+	"graphics.hpp"
+	<iostream>
+	<time.h>
+	<math.h>
+
+1526168718 c:\users\boldizsár\documents\github\tankwgame\pushbutton.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1526182740 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
+	"TankWidget.hpp"
+	"graphics.hpp"
+	<math.h>
+	<iostream>
+	<ctime>
+	<time.h>
+	<string>
+	<sstream>
+
+1526180048 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+
+1526182462 source:c:\users\boldizsár\documents\github\tankwgame\textbox.cpp
+	"TextBox.hpp"
+	"graphics.hpp"
+	<string>
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<sstream>
+
+1526182052 c:\users\boldizsár\documents\github\tankwgame\textbox.hpp
+	"examplecheckbox.hpp"
+	"widgets.hpp"
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<vector>
+
+1524495192 source:c:\users\boldizsár\documents\github\tankwgame\vbutton.cpp
+	"vButton.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1524493370 c:\users\boldizsár\documents\github\tankwgame\vbutton.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+	"PushButton.hpp"
+	"Window.hpp"
+
+1524493201 c:\users\boldizsár\documents\github\tankwgame\window.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+	<vector>
+	<string>
+
+1523626512 source:c:\users\boldizsár\documents\github\tankwgame\widgets.cpp
+	"widgets.hpp"
+	"graphics.hpp"
+	<string.h>
+	<iostream>
+	<cstdlib>
+	<sstream>
+	<vector>
+
+1525698984 source:c:\users\boldizsár\documents\github\tankwgame\window.cpp
+	"graphics.hpp"
+	"Window.hpp"
+
+1526182613 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
+	"JatekMester.hpp"
+	"graphics.hpp"
+	"TextBox.hpp"
+	"FocusedCheckBox.hpp"
+	"vButton.hpp"
+	"TankWidget.hpp"
+	"numberchanger.hpp"
+	"map.hpp"
+	<vector>
+	<string>
+	<iostream>
+
+1526164092 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
+	"Window.hpp"
+	"graphics.hpp"
+	<string>
+
+1526169377 source:c:\users\boldizsár\documents\github\tankwgame\main.cpp
+	"graphics.hpp"
+	"widgets.hpp"
+	"numberchanger.hpp"
+	"FocusedCheckBox.hpp"
+	"examplecheckbox.hpp"
+	"TextBox.hpp"
+	"JatekMester.hpp"
+	<vector>
+	<fstream>
+	<math.h>
+
