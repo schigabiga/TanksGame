@@ -53,6 +53,8 @@ void TankWidget::draw()
 
     gout << move_to(_x+_size_x/2,_y-20) << color(213,55,33) << line_to(_x+_size_x/2+ix,_y-iy-20);
 
+    yb=yi;
+
     av=_x+_size_x/2+ix;
     ev=_y-iy-20;
 
@@ -130,15 +132,11 @@ void TankWidget::handle(event ev)
                 xx=ax+u*timerr-f_x*timerr*timerr;
                 yy=ay-w*timerr+(grav/2)*timerr*timerr+f_y*timerr*timerr;
 
-                //cout<<_x<<" "<<_size_x<<endl;
-
-                if(xx>=800 && xx<=870 && yy>=370){
-                    cout<<_ki<<endl;
+                if(xx>=800 && xx<=870 && yy>=_ipy){
                     _parent->vege();
                     _parent->nyertesjatekos("Elso tank");
                 }
-                if(xx>=30 && xx<=100 && yy>=370){
-                    cout<<_ki<<endl;
+                if(xx>=30 && xx<=100 && yy>=_ipy){
                     _parent->vege();
                     _parent->nyertesjatekos("Masodik tank");
                 }
@@ -156,24 +154,6 @@ void TankWidget::handle(event ev)
                     _ki=_parent->getkijon();
                     _parent->lepes();
                 }
-              /*  if(xx>=800 && xx<=870 && yy>=370 && _ki=="Elso tank"){
-                        cout<<"hahao"<<endl;
-                    _parent->vege();
-                     t=true;
-                    gin.timer(0);
-                    _parent->lepes_tortent();
-                }
-                if( _ki=="Masodik tank" && (xx>=30 && xx<=100 && yy>=370) || (xx>_x+_size_x/2 && yy>_y-20 && xx<_x+_size_x/2+ix && yy<_y-iy-20)){                    cout<<"YES"<<endl;
-                    cout<<"hahao2"<<endl;
-                    _parent->vege();
-                     t=true;
-                    gin.timer(0);
-                    _parent->lepes_tortent();
-                }*/
-
-
-
-
             }
 
         }
@@ -181,18 +161,12 @@ void TankWidget::handle(event ev)
 
 
 }
+double TankWidget::yback(){
+    return yb;
+}
 
-double TankWidget::tx(){
-    return _x;
-}
-double TankWidget::sx(){
-    return _size_x;
-}
-double TankWidget::ty(){
-    return _y;
-}
-double TankWidget::sy(){
-    return _size_y;
+void TankWidget::kisy(double y){
+    _ipy=y;
 }
 
 string TankWidget::getszoveg()

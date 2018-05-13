@@ -30,6 +30,8 @@ protected:
     string _ki;
     JatekMester* _parent;
 
+    double yb;
+    double _ipy;
 
 public:
     TankWidget(int x, int y, int sx, int sy,int szog,int sp,int nez, JatekMester* parent);
@@ -43,12 +45,10 @@ public:
     virtual void bul(bool k);
     virtual double x();
     virtual double y();
+    virtual double yback();
+    virtual void kisy(double y);
     virtual void szello(double ertek);
     virtual string getszoveg();
-    virtual double tx();
-    virtual double sx();
-    virtual double ty();
-    virtual double sy();
-
 };
 #endif
+

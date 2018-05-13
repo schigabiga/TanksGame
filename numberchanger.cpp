@@ -14,6 +14,7 @@ numberchanger::numberchanger(int x, int y, int sx, int sy,int mi,int ma,int k): 
     _dec=false;
     _max=ma;
     _min=mi;
+    active=true;
 
 }
 
@@ -106,6 +107,7 @@ void numberchanger::draw()
 
 void numberchanger::handle(event ev)
 {
+   if(active==true){
     if (ev.type == ev_key && (ev.keycode == key_enter || ev.keycode == ' ')) {
             _checked = !_checked;
     }
@@ -161,7 +163,11 @@ void numberchanger::handle(event ev)
      	_focus=false;
      }
     }
+   }
+}
 
+void numberchanger::activ(){
+    active=!active;
 }
 
 bool numberchanger::is_inc(int mouse_x, int mouse_y)

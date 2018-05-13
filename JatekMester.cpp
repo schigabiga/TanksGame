@@ -9,11 +9,21 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <sstream>
 using namespace genv;
 using namespace std;
 
 
 TextBox * t1=new TextBox(410,495,50,50,"");
+TextBox * t2=new TextBox(50,35,50,50,"0");
+TextBox * t3=new TextBox(800,35,50,50,"0");
+
+TextBox * t4=new TextBox(20,2,480,30,"Az ertekek beallitasa utan kattints a tankra a tuzeleshez!");
+TextBox * t5=new TextBox(40,445,60,30,"Degree:");
+TextBox * t6=new TextBox(160,445,60,30,"Power:");
+TextBox * t7=new TextBox(600,445,60,30,"Degree:");
+TextBox * t8=new TextBox(740,445,60,30,"Power:");
+TextBox * t9=new TextBox(390,455,60,30,"Wind:");
 
 TankWidget * a1;
 TankWidget * a2;
@@ -36,7 +46,7 @@ JatekMester::JatekMester()
     a1=new TankWidget(30,390,70,20,60,60,1,this);
     a2=new TankWidget(800,390,70,20,120,60,2,this);
 
-    s1= new TextBox(325,30,250,50,"Elso tank kövezketik");
+    s1= new TextBox(325,35,250,50,"Elso tank kövezketik");
 
 	widgets.push_back(m1);
 
@@ -52,6 +62,14 @@ JatekMester::JatekMester()
 	widgets.push_back(b2);
 
 	widgets.push_back(t1);
+	widgets.push_back(t2);
+	widgets.push_back(t3);
+	widgets.push_back(t4);
+	widgets.push_back(t5);
+	widgets.push_back(t6);
+	widgets.push_back(t7);
+	widgets.push_back(t8);
+	widgets.push_back(t9);
 
 	widgets.push_back(a1);
 
@@ -73,7 +91,14 @@ JatekMester::JatekMester()
     vege_a_jateknak=false;
     kijon="Elso tank";
 
+    elsoj=0;
+    masoj=0;
 
+    a1->kisy(345);
+
+    n3->activ();
+    n4->activ();
+    b2->active();
 }
 
 void JatekMester::lepes(){
@@ -84,10 +109,17 @@ void JatekMester::lepes(){
         string who="";
 
         if(kijon=="Elso tank"){
+
+            n1->activ();
+            n2->activ();
+            n3->activ();
+            n4->activ();
+            b1->active();
+            b2->active();
+
+            a2->kisy(a1->yback());
+
             //szell
-
-
-
             if(i==1){
                 a2->szello(m1->szelgeneral());
                 t1->texting(m1->szelgeneral());
@@ -98,8 +130,18 @@ void JatekMester::lepes(){
             }
             //
             kijon="Masodik tank";
+
         }
         else{
+            n1->activ();
+            n2->activ();
+            n3->activ();
+            n4->activ();
+            b1->active();
+            b2->active();
+
+            a1->kisy(a2->yback());
+
             //szel
             if(i==1){
                 a1->szello(m1->szelgeneral());
@@ -117,12 +159,35 @@ void JatekMester::lepes(){
         who+=" következik";
 
         s1->settext(who);
+
+        if(vege_a_kornek==true){
+            if(nyertes=="Elso tank"){
+                elsoj++;
+            }
+            if(nyertes=="Masodik tank"){
+                masoj++;
+            }
+            stringstream ss;
+            string es,ms;
+            ss<<elsoj;
+            ss>>es;
+            ss.clear();
+            ss<<masoj;
+            ss>>ms;
+            t2->settext(es);
+            t3->settext(ms);
+            vege_a_kornek=false;
+        }
     }
-    else{
-        string s="!!! ";
-        s+=nyertes;
-        s+=" nyert!!!";
-        s1->settext(s);
+    if(elsoj==5 || masoj==5){
+        vege_a_jateknak=true;
+        if(elsoj==5){
+            s1->settext("!!! Az elso tank nyert !!!");
+        }
+        else{
+            s1->settext("!!! A masodik tank nyert");
+        }
+
     }
 
 }
@@ -131,7 +196,7 @@ void JatekMester::nyertesjatekos(string n){
 }
 
 void JatekMester::vege(){
-    vege_a_jateknak=true;
+    vege_a_kornek=true;
 }
 
 string JatekMester::getkijon(){

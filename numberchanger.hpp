@@ -14,6 +14,7 @@ class numberchanger: public Widget
         bool _inc;
         bool _dec;
         int _max,_min;
+        bool active;
 
 	public:
 	    numberchanger(int x,int y,int m,int n,int ma,int mi,int k);
@@ -22,6 +23,7 @@ class numberchanger: public Widget
         virtual void draw();
         virtual double GetNumber();
         virtual void handle(genv::event ev);
+        virtual void activ();
 
 };
 

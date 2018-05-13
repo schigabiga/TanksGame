@@ -11,8 +11,7 @@ protected:
     bool _lenyomott;
     bool _lenyomott_old;
     bool _focused;
-
-    double ix,iy,f,ks;
+    bool activ;
 
 public:
     PushButton(int x, int y, int sx, int sy, std::string szoveg);
@@ -23,14 +22,7 @@ public:
     void katt();
     bool kijelolt();
     virtual bool _focusable();
-   // virtual void csdraw(double _x,double _y,double f,double s,genv::event ev );
-    virtual void fok(double f);
-    virtual void seb(double k);
-    virtual void ex(double x);
-    virtual void ey(double y);
-
-
-   // virtual void setText(std::string txt);
+    virtual void active();
 };
 
 #endif // PUSHBUTTON_HPP_INCLUDED

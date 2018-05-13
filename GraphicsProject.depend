@@ -185,7 +185,7 @@
 	<cstdlib>
 	<vector>
 
-1526226523 source:c:\users\boldizsár\documents\github\tankwgame\map.cpp
+1526231285 source:c:\users\boldizsár\documents\github\tankwgame\map.cpp
 	"map.hpp"
 	"graphics.hpp"
 	<ctime>
@@ -194,28 +194,28 @@
 	"graphics.hpp"
 	"widgets.hpp"
 
-1526182763 source:c:\users\boldizsár\documents\github\tankwgame\numberchanger.cpp
+1526227084 source:c:\users\boldizsár\documents\github\tankwgame\numberchanger.cpp
 	"numberchanger.hpp"
 	"graphics.hpp"
 	<string>
 	<sstream>
 
-1526182575 c:\users\boldizsár\documents\github\tankwgame\numberchanger.hpp
+1526226893 c:\users\boldizsár\documents\github\tankwgame\numberchanger.hpp
 	"numberchanger.hpp"
 	"widgets.hpp"
 
-1526168691 source:c:\users\boldizsár\documents\github\tankwgame\pushbutton.cpp
+1526227379 source:c:\users\boldizsár\documents\github\tankwgame\pushbutton.cpp
 	"PushButton.hpp"
 	"graphics.hpp"
 	<iostream>
 	<time.h>
 	<math.h>
 
-1526168718 c:\users\boldizsár\documents\github\tankwgame\pushbutton.hpp
+1526227302 c:\users\boldizsár\documents\github\tankwgame\pushbutton.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 
-1526226264 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
+1526230973 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
 	"TankWidget.hpp"
 	"graphics.hpp"
 	"JatekMester.hpp"
@@ -226,7 +226,7 @@
 	<string>
 	<sstream>
 
-1526223888 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
+1526230391 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"JatekMester.hpp"
@@ -274,11 +274,11 @@
 	<sstream>
 	<vector>
 
-1526220838 source:c:\users\boldizsár\documents\github\tankwgame\window.cpp
+1526230973 source:c:\users\boldizsár\documents\github\tankwgame\window.cpp
 	"graphics.hpp"
 	"Window.hpp"
 
-1526226398 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
+1526230912 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
 	"JatekMester.hpp"
 	"graphics.hpp"
 	"TextBox.hpp"
@@ -290,8 +290,9 @@
 	<vector>
 	<string>
 	<iostream>
+	<sstream>
 
-1526225756 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
+1526228629 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
 	"Window.hpp"
 	"graphics.hpp"
 	"TextBox.hpp"

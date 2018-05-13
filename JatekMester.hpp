@@ -12,9 +12,12 @@ class JatekMester : public Window
 {
 protected:
     string kijon;
-    bool vege_a_jateknak;
+    bool vege_a_kornek;
     string nyertes;
     TextBox *s1;
+    int elsoj;
+    int masoj;
+    bool vege_a_jateknak;
 public:
     JatekMester();
     //
