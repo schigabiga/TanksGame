@@ -1,18 +1,8 @@
-#include "widgets.hpp"
-#include "numberchanger.hpp"
-#include "TextBox.hpp"
-#include "JatekMester.hpp"
-#include <vector>
-#include <fstream>
-using namespace std;
-using namespace genv;
-#include <math.h>
 
-//comment
+#include "JatekMester.hpp"
 
 int main()
 {
-
     JatekMester w;
     w.event_loop();
 
