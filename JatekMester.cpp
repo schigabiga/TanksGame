@@ -47,6 +47,10 @@ TextBox *s1;
 
 JatekMester::JatekMester()
 {
+    int gx=1100;
+    int gy=600;
+	gout.open(gx,gy);
+
     a1=new TankWidget(30+plusz,390,70,20,60,60,1,this);
     a2=new TankWidget(800+plusz,390,70,20,120,60,2,this);
 

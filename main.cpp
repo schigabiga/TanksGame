@@ -1,4 +1,3 @@
-#include "graphics.hpp"
 #include "widgets.hpp"
 #include "numberchanger.hpp"
 #include "TextBox.hpp"
@@ -13,9 +12,6 @@ using namespace genv;
 
 int main()
 {
-    int gx=1100;
-    int gy=600;
-	gout.open(gx,gy);
 
     JatekMester w;
     w.event_loop();
