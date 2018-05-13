@@ -40,8 +40,6 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
-		<Unit filename="FocusedCheckBox.cpp" />
-		<Unit filename="FocusedCheckBox.hpp" />
 		<Unit filename="JatekMester.cpp" />
 		<Unit filename="JatekMester.hpp" />
 		<Unit filename="PushButton.cpp" />
@@ -52,8 +50,6 @@
 		<Unit filename="TextBox.hpp" />
 		<Unit filename="Window.cpp" />
 		<Unit filename="Window.hpp" />
-		<Unit filename="examplecheckbox.cpp" />
-		<Unit filename="examplecheckbox.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="map.cpp" />
 		<Unit filename="map.hpp" />

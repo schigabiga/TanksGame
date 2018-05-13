@@ -6,13 +6,11 @@
 #include "TankWidget.hpp"
 #include "numberchanger.hpp"
 #include "map.hpp"
-#include <vector>
-#include <string>
-#include <iostream>
-#include <sstream>
-using namespace genv;
-using namespace std;
 
+#include <vector>
+#include <sstream>
+
+using namespace genv;
 
 TextBox * t1=new TextBox(410,495,50,50,"");
 TextBox * t2=new TextBox(50,35,50,50,"0");
@@ -40,6 +38,7 @@ Map *m1=new Map(0,420,900,180);
 
 vButton *b1;
 vButton *b2;
+TextBox *s1;
 
 JatekMester::JatekMester()
 {
@@ -75,8 +74,9 @@ JatekMester::JatekMester()
 
 	widgets.push_back(a2);
 
+    widgets.push_back(s1);
+
     double i=m1->szelirany();
-    cout<<i<<endl;
     if(i==1){
         a2->szello(m1->szelgeneral());
         t1->texting(m1->szelgeneral());
@@ -85,8 +85,6 @@ JatekMester::JatekMester()
         a2->szello(-(m1->szelgeneral()));
         t1->texting(-(m1->szelgeneral()));
     }
-
-    widgets.push_back(s1);
 
     vege_a_jateknak=false;
     kijon="Elso tank";

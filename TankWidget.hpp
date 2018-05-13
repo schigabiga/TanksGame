@@ -1,12 +1,9 @@
 #ifndef TANKWIDGET_HPP_INCLUDED
 #define TANKWIDGET_HPP_INCLUDED
 
-#include "graphics.hpp"
 #include "widgets.hpp"
 
 #include "JatekMester.hpp"
-
-
 
 class JatekMester;
 
@@ -14,14 +11,14 @@ class TankWidget : public Widget {
 protected:
     bool _checked;
     bool start;
+
     double sz;
     double xi,yi;
-
     double ix,iy;
 
     double ks,wind;
     double av,ev;
-    bool b;
+
 
     bool vege;
     int ki;
@@ -42,9 +39,6 @@ public:
     virtual void handle(genv::event ev);
     virtual void Start();
     virtual bool is_checked();
-    virtual void bul(bool k);
-    virtual double x();
-    virtual double y();
     virtual double yback();
     virtual void kisy(double y);
     virtual void szello(double ertek);

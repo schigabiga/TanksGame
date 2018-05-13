@@ -1,7 +1,6 @@
 #ifndef MAP_HPP_INCLUDED
 #define MAP_HPP_INCLUDED
 
-#include "graphics.hpp"
 #include "widgets.hpp"
 
 class   Map : public Widget {
@@ -16,6 +15,5 @@ public:
     virtual double szelirany();
 
 };
-
 
 #endif // EXAMPLECHECKBOX_HPP_INCLUDED

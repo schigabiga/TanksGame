@@ -1,7 +1,6 @@
 #ifndef PUSHBUTTON_HPP_INCLUDED
 #define PUSHBUTTON_HPP_INCLUDED
 
-#include "graphics.hpp"
 #include "widgets.hpp"
 
 class PushButton : public Widget{

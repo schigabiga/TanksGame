@@ -1,14 +1,13 @@
 #include "TankWidget.hpp"
-#include "graphics.hpp"
 #include "JatekMester.hpp"
+
 #include <math.h>
-#include <iostream>
 #include <ctime>
 #include <time.h>
 #include <string>
 #include <sstream>
+
 using namespace genv;
-using namespace std;
 
 TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp,int nez, JatekMester* parent): Widget(x,y,sx,sy)
 {
@@ -17,8 +16,8 @@ TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp,int nez, JatekM
     sz=(  s/(180/3.141592654));
 
     start=false;
-    b=true;
     vege=false;
+
     ir=nez;
 
     _parent=parent;
@@ -204,17 +203,7 @@ void TankWidget::Start(){
     start=true;
 }
 
-void TankWidget::bul(bool k){
-    b=k;
-}
 
-double TankWidget::x(){
-    return xi;
-}
-
-double TankWidget::y(){
-    return yi;
-}
 
 
 

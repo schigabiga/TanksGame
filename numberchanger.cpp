@@ -1,8 +1,9 @@
 #include "numberchanger.hpp"
-#include "graphics.hpp"
-using namespace genv;
+
 #include <string>
 #include <sstream>
+
+using namespace genv;
 
 numberchanger::numberchanger(int x, int y, int sx, int sy,int mi,int ma,int k): Widget(x,y,sx,sy)
 {

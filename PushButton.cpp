@@ -1,11 +1,9 @@
 #include "PushButton.hpp"
-#include "graphics.hpp"
-#include <iostream>
+
 #include <time.h>
 #include <math.h>
-using namespace genv;
-using namespace std;
 
+using namespace genv;
 
 PushButton::PushButton(int x, int y, int sx, int sy, string szoveg): Widget(x,y,sx,sy)
 {

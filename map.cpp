@@ -1,8 +1,8 @@
 #include "map.hpp"
-#include "graphics.hpp"
+
 #include <ctime>
+
 using namespace genv;
-using namespace std;
 
 Map::Map(int x, int y, int sx, int sy): Widget(x,y,sx,sy)
 {
