@@ -15,8 +15,8 @@ using namespace std;
 
 TextBox * t1=new TextBox(410,495,50,50);
 
-TankWidget * a1=new TankWidget(30,390,70,20,60,60);
-TankWidget * a2=new TankWidget(800,390,70,20,120,60);
+TankWidget * a1=new TankWidget(30,390,70,20,60,60,1);
+TankWidget * a2=new TankWidget(800,390,70,20,120,60,2);
 
 
 numberchanger *n1=new numberchanger(60,480,80,80,0,90,60);

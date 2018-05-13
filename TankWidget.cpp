@@ -9,7 +9,7 @@
 using namespace genv;
 using namespace std;
 
-TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp): Widget(x,y,sx,sy)
+TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp,int nez): Widget(x,y,sx,sy)
 {
     _checked=true;
     ks=sp;
@@ -18,6 +18,7 @@ TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp): Widget(x,y,sx
     start=false;
     b=true;
     vege=false;
+    ir=nez;
 }
 
 void TankWidget::draw()
@@ -58,18 +59,6 @@ void TankWidget::draw()
         }
     }
 
-   /* if(b==false){//153, 204, 255
-
-        gout<<move_to(790,100)<<color(0,0,0)<<text("Your turn!");
-        gout<<move_to(50,100)<<color(255,0,0)<<box(80,-20);
-
-    }
-  //  else{
-
-    //    gout<<move_to(50,100)<<color(0,0,0)<<text("Your turn!");
-      //  gout<<move_to(790,100)<<color(153, 204, 255)<<box(80,-20);
-    //}*/
-
 
 }
 
@@ -102,7 +91,13 @@ void TankWidget::handle(event ev)
         double xx=ax;
         double yy=ay;
 
-        double v_l=szell;
+        double v_l;
+        if(ir==1){
+            v_l=szell;
+        }
+        else
+            v_l=-szell;
+
 
 
         double w=kseb*sin(sz);
@@ -149,13 +144,6 @@ void TankWidget::handle(event ev)
                 else{
                     t=true;
                     gin.timer(0);
-
-                    /*if(kezdetix<xx){
-                        b=false;
-                    }
-                    if(kezdetix>xx){
-                        b=true;
-                    }*/
                 }
 
                 if(xx>=800 && xx<=870 && yy>=350){

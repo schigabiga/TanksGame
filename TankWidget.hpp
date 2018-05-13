@@ -17,9 +17,10 @@ protected:
     bool vege;
     int ki;
     double szell;
+    int ir;
 
 public:
-    TankWidget(int x, int y, int sx, int sy,int szog,int sp);
+    TankWidget(int x, int y, int sx, int sy,int szog,int sp,int nez);
     virtual void draw() ;
     virtual void Degree( double fok);
     virtual void Speed( double s);
