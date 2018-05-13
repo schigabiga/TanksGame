@@ -109,6 +109,13 @@ void TankWidget::handle(event ev)
 
         double kezdetix=xx;
 
+        if(_fegyver=="Szell toro"){
+            cout<<"hahaoo"<<endl;
+            v_l=1;
+        }
+
+
+
         while(gin>>ev && t==false){
 
 
@@ -131,16 +138,16 @@ void TankWidget::handle(event ev)
                 xx=ax+u*timerr-f_x*timerr*timerr;
                 yy=ay-w*timerr+(grav/2)*timerr*timerr+f_y*timerr*timerr;
 
-                if(xx>=800 && xx<=870 && yy>=_ipy){
+                if(xx>=900 && xx<=970 && yy>=_ipy){
                     _parent->vege();
                     _parent->nyertesjatekos("Elso tank");
                 }
-                if(xx>=30 && xx<=100 && yy>=_ipy){
+                if(xx>=130 && xx<=200 && yy>=_ipy){
                     _parent->vege();
                     _parent->nyertesjatekos("Masodik tank");
                 }
 
-                if(yy<_y+20 && yy>95 && xx>0 && xx <900){
+                if(yy<_y+20 && yy>95 && xx>0 && xx <1100){
                     gout<<move_to(px,py)<<color(153, 204, 255)<<box(10,10);
 
                     gout<<move_to(xx,yy)<<color(77, 77, 51)<<box(10,10);
@@ -166,6 +173,10 @@ double TankWidget::yback(){
 
 void TankWidget::kisy(double y){
     _ipy=y;
+}
+
+string TankWidget::fegyverback(){
+    return _fegyver;
 }
 
 string TankWidget::getszoveg()
@@ -201,6 +212,10 @@ string TankWidget::Wind(){
 
 void TankWidget::Start(){
     start=true;
+}
+
+void TankWidget::setfegyver(string f){
+    _fegyver=f;
 }
 
 

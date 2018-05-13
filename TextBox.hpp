@@ -1,7 +1,6 @@
 #ifndef TEXTBOX_H
 #define TEXTBOX_H
 
-#include "examplecheckbox.hpp"
 #include "widgets.hpp"
 #include <string.h>
 #include <iostream>

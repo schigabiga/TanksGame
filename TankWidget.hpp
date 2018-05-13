@@ -30,6 +30,8 @@ protected:
     double yb;
     double _ipy;
 
+    string _fegyver;
+
 public:
     TankWidget(int x, int y, int sx, int sy,int szog,int sp,int nez, JatekMester* parent);
     virtual void draw() ;
@@ -43,6 +45,8 @@ public:
     virtual void kisy(double y);
     virtual void szello(double ertek);
     virtual string getszoveg();
+    virtual void setfegyver(string f);
+    virtual string fegyverback();
 };
 #endif
 

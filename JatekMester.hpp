@@ -4,6 +4,7 @@
 #include "Window.hpp"
 
 #include <string>
+#include <vector>
 
 using namespace genv;
 
@@ -16,6 +17,7 @@ protected:
     int elsoj;
     int masoj;
     bool vege_a_jateknak;
+    vector<string> lovedekek;
 public:
     JatekMester();
     //

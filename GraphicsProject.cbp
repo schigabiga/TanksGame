@@ -40,6 +40,8 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="ChoosWidget.cpp" />
+		<Unit filename="ChoosWidget.hpp" />
 		<Unit filename="JatekMester.cpp" />
 		<Unit filename="JatekMester.hpp" />
 		<Unit filename="PushButton.cpp" />

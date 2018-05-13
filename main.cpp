@@ -1,8 +1,6 @@
 #include "graphics.hpp"
 #include "widgets.hpp"
 #include "numberchanger.hpp"
-#include "FocusedCheckBox.hpp"
-#include "examplecheckbox.hpp"
 #include "TextBox.hpp"
 #include "JatekMester.hpp"
 #include <vector>
@@ -15,7 +13,7 @@ using namespace genv;
 
 int main()
 {
-    int gx=900;
+    int gx=1100;
     int gy=600;
 	gout.open(gx,gy);
 

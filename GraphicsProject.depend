@@ -209,7 +209,7 @@
 1526233553 c:\users\boldizsár\documents\github\tankwgame\pushbutton.hpp
 	"widgets.hpp"
 
-1526233309 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
+1526242268 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
 	"TankWidget.hpp"
 	"JatekMester.hpp"
 	<math.h>
@@ -218,7 +218,7 @@
 	<string>
 	<sstream>
 
-1526233212 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
+1526234995 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
 	"widgets.hpp"
 	"JatekMester.hpp"
 
@@ -231,8 +231,7 @@
 	<cstdlib>
 	<sstream>
 
-1526217920 c:\users\boldizsár\documents\github\tankwgame\textbox.hpp
-	"examplecheckbox.hpp"
+1526234322 c:\users\boldizsár\documents\github\tankwgame\textbox.hpp
 	"widgets.hpp"
 	<string.h>
 	<iostream>
@@ -269,28 +268,27 @@
 	"graphics.hpp"
 	"Window.hpp"
 
-1526232991 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
+1526241914 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
 	"JatekMester.hpp"
 	"graphics.hpp"
 	"TextBox.hpp"
-	"FocusedCheckBox.hpp"
 	"vButton.hpp"
 	"TankWidget.hpp"
 	"numberchanger.hpp"
 	"map.hpp"
+	"ChoosWidget.hpp"
 	<vector>
 	<sstream>
 
-1526232991 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
+1526234173 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
 	"Window.hpp"
 	<string>
+	<vector>
 
-1526169377 source:c:\users\boldizsár\documents\github\tankwgame\main.cpp
+1526235142 source:c:\users\boldizsár\documents\github\tankwgame\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"numberchanger.hpp"
-	"FocusedCheckBox.hpp"
-	"examplecheckbox.hpp"
 	"TextBox.hpp"
 	"JatekMester.hpp"
 	<vector>
@@ -305,4 +303,13 @@
 1526216629 source:c:\users\boldizsár\documents\github\tankwgame\statictext.cpp
 	"StaticText.hpp"
 	"graphics.hpp"
+
+1526240722 source:c:\users\boldizsár\documents\github\tankwgame\chooswidget.cpp
+	"ChoosWidget.hpp"
+	"graphics.hpp"
+
+1526240670 c:\users\boldizsár\documents\github\tankwgame\chooswidget.hpp
+	"ChoosWidget.hpp"
+	<vector>
+	"widgets.hpp"
 
