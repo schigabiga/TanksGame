@@ -15,10 +15,12 @@ class TextBox : public Widget
         string _tel;
 
 	public:
-		TextBox(int x, int y, int sx, int sy);
+		TextBox(int x, int y, int sx, int sy,string s);
     virtual void draw() ;
     virtual void handle(genv::event ev);
     virtual void texting(double t);
+    virtual void settext(string t);
+    virtual string gettext();
 };
 
 

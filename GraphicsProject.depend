@@ -215,9 +215,10 @@
 	"graphics.hpp"
 	"widgets.hpp"
 
-1526182740 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
+1526216769 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
 	"TankWidget.hpp"
 	"graphics.hpp"
+	"JatekMester.hpp"
 	<math.h>
 	<iostream>
 	<ctime>
@@ -225,11 +226,12 @@
 	<string>
 	<sstream>
 
-1526208964 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
+1526216083 c:\users\boldizsár\documents\github\tankwgame\tankwidget.hpp
 	"graphics.hpp"
 	"widgets.hpp"
+	"JatekMester.hpp"
 
-1526182462 source:c:\users\boldizsár\documents\github\tankwgame\textbox.cpp
+1526218491 source:c:\users\boldizsár\documents\github\tankwgame\textbox.cpp
 	"TextBox.hpp"
 	"graphics.hpp"
 	<string>
@@ -238,7 +240,7 @@
 	<cstdlib>
 	<sstream>
 
-1526182052 c:\users\boldizsár\documents\github\tankwgame\textbox.hpp
+1526217920 c:\users\boldizsár\documents\github\tankwgame\textbox.hpp
 	"examplecheckbox.hpp"
 	"widgets.hpp"
 	<string.h>
@@ -276,7 +278,7 @@
 	"graphics.hpp"
 	"Window.hpp"
 
-1526208947 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
+1526218159 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
 	"JatekMester.hpp"
 	"graphics.hpp"
 	"TextBox.hpp"
@@ -289,9 +291,10 @@
 	<string>
 	<iostream>
 
-1526164092 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
+1526218871 c:\users\boldizsár\documents\github\tankwgame\jatekmester.hpp
 	"Window.hpp"
 	"graphics.hpp"
+	"TextBox.hpp"
 	<string>
 
 1526169377 source:c:\users\boldizsár\documents\github\tankwgame\main.cpp
@@ -305,4 +308,13 @@
 	<vector>
 	<fstream>
 	<math.h>
+
+1525748552 c:\users\boldizsár\documents\github\tankwgame\statictext.hpp
+	"graphics.hpp"
+	"widgets.hpp"
+	<string>
+
+1526216629 source:c:\users\boldizsár\documents\github\tankwgame\statictext.cpp
+	"StaticText.hpp"
+	"graphics.hpp"
 

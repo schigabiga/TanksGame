@@ -13,17 +13,17 @@ using namespace genv;
 using namespace std;
 
 
-TextBox * t1=new TextBox(410,495,50,50);
+TextBox * t1=new TextBox(410,495,50,50,"");
 
-TankWidget * a1=new TankWidget(30,390,70,20,60,60,1);
-TankWidget * a2=new TankWidget(800,390,70,20,120,60,2);
+TankWidget * a1;
+TankWidget * a2;
 
 
-numberchanger *n1=new numberchanger(60,480,80,80,0,90,60);
-numberchanger *n2=new numberchanger(180,480,80,80,0,200,30);
+numberchanger *n1=new numberchanger(60,480,80,80,10,90,60);
+numberchanger *n2=new numberchanger(180,480,80,80,10,200,30);
 
-numberchanger *n3=new numberchanger(620,480,80,80,0,90,60);
-numberchanger *n4=new numberchanger(760,480,80,80,0,200,40);
+numberchanger *n3=new numberchanger(620,480,80,80,10,90,60);
+numberchanger *n4=new numberchanger(760,480,80,80,10,200,40);
 
 Map *m1=new Map(0,420,900,180);
 
@@ -33,6 +33,10 @@ vButton *b2;
 
 JatekMester::JatekMester()
 {
+    a1=new TankWidget(30,390,70,20,60,60,1,this);
+    a2=new TankWidget(800,390,70,20,120,60,2,this);
+
+    s1= new TextBox(325,60,250,50,"Elsõ tank kövezketik");
 
 	widgets.push_back(m1);
 
@@ -63,6 +67,58 @@ JatekMester::JatekMester()
         a2->szello(-(m1->szelgeneral()));
         t1->texting(-(m1->szelgeneral()));
     }
+
+    widgets.push_back(s1);
+
+    vege_a_jateknak=false;
+    kijon="Elsõ tank";
+
+}
+
+void JatekMester::lepes_tortent(){
+
+
+    if(!vege_a_jateknak){
+        double i=m1->szelirany();
+        string who="";
+
+        if(kijon=="Elsõ tank"){
+            //szell
+            if(i==1){
+                a2->szello(m1->szelgeneral());
+                t1->texting(m1->szelgeneral());
+            }
+            else{
+                a2->szello(-(m1->szelgeneral()));
+                t1->texting(-(m1->szelgeneral()));
+            }
+            //
+            kijon="Második tank";
+        }
+        else{
+            //szel
+            if(i==1){
+                a1->szello(m1->szelgeneral());
+                t1->texting(m1->szelgeneral());
+            }
+            else{
+                a1->szello(-(m1->szelgeneral()));
+                t1->texting(-(m1->szelgeneral()));
+            }
+            //
+            kijon="Elsõ tank";
+        }
+
+        who=kijon;
+        who+=" következik";
+
+        s1->settext(who);
+    }
+
+}
+
+string JatekMester::getkijon(){
+    return kijon;
 }
 
 void JatekMester::event(string m)
@@ -72,15 +128,7 @@ void JatekMester::event(string m)
         a1->Speed(n2->GetNumber());
         a1->Start();
 
-        double i=m1->szelirany();
-        if(i==1){
-            a1->szello(m1->szelgeneral());
-            t1->texting(m1->szelgeneral());
-        }
-        else{
-            a1->szello(-(m1->szelgeneral()));
-            t1->texting(-(m1->szelgeneral()));
-        }
+
     }
 
     if(m=="Set2!"){
@@ -89,14 +137,6 @@ void JatekMester::event(string m)
         a2->Speed(n4->GetNumber());
         a2->Start();
 
-        double i=m1->szelirany();
-        if(i==1){
-            a2->szello(m1->szelgeneral());
-            t1->texting(m1->szelgeneral());
-        }
-        else{
-            a2->szello(-(m1->szelgeneral()));
-            t1->texting(-(m1->szelgeneral()));
-        }
+
     }
 }

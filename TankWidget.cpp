@@ -1,5 +1,6 @@
 #include "TankWidget.hpp"
 #include "graphics.hpp"
+#include "JatekMester.hpp"
 #include <math.h>
 #include <iostream>
 #include <ctime>
@@ -9,7 +10,7 @@
 using namespace genv;
 using namespace std;
 
-TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp,int nez): Widget(x,y,sx,sy)
+TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp,int nez, JatekMester* parent): Widget(x,y,sx,sy)
 {
     _checked=true;
     ks=sp;
@@ -19,10 +20,15 @@ TankWidget::TankWidget(int x, int y, int sx, int sy,int s,int sp,int nez): Widge
     b=true;
     vege=false;
     ir=nez;
+
+    _parent=parent;
+
+    _ki="Senki";
 }
 
 void TankWidget::draw()
 {
+
     gout<<move_to(_x+_size_x/2,_y-20)<<color(153, 204, 255)<<line_to(av,ev);
 
     gout << move_to(_x, _y) << color(44,213,55) << box(_size_x,_size_y);
@@ -144,6 +150,8 @@ void TankWidget::handle(event ev)
                 else{
                     t=true;
                     gin.timer(0);
+                    _ki=_parent->getkijon();
+                    _parent->lepes_tortent();
                 }
 
                 if(xx>=800 && xx<=870 && yy>=350){
@@ -163,6 +171,10 @@ void TankWidget::handle(event ev)
 
 }
 
+string TankWidget::getszoveg()
+{
+	return _ki;
+}
 
 void TankWidget::szello(double e){
     szell=e;
