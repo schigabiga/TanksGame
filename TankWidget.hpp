@@ -16,6 +16,9 @@ protected:
     bool start;
     double sz;
     double xi,yi;
+
+    double ix,iy;
+
     double ks,wind;
     double av,ev;
     bool b;
@@ -42,6 +45,10 @@ public:
     virtual double y();
     virtual void szello(double ertek);
     virtual string getszoveg();
+    virtual double tx();
+    virtual double sx();
+    virtual double ty();
+    virtual double sy();
 
 };
 #endif

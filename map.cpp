@@ -16,6 +16,8 @@ void Map::draw()
     gout << move_to(_x, _y) << color(102, 255, 102) << box(_size_x, _size_y-100);
     gout << move_to(_x, _y+20) << color(153, 51, 0) << box(_size_x, _size_y-20);
 
+    gout<<move_to(0,90)<<color(255,255,255)<<box(_size_x,5);
+
     gout<<move_to(20,20)<<color(0,0,0)<<text("-> Az értékek beállítása után kattints a tankra a tûzeléshez!");
     gout<<move_to(50,470)<<color(0,0,0)<<text("Degree:");
     gout<<move_to(170,470)<<color(0,0,0)<<text("Power:");

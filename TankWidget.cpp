@@ -45,8 +45,8 @@ void TankWidget::draw()
     double    rx=40;
     double    _iy=0;
     double    ss=sz;
-    double    ix= rx*cos(ss) - _iy*sin(ss);
-    double    iy= rx*sin(ss) + _iy*cos(ss);
+    ix= rx*cos(ss) - _iy*sin(ss);
+    iy= rx*sin(ss) + _iy*cos(ss);
 
     xi=_x+_size_x/2+ix;
     yi=_y-iy-20;
@@ -55,16 +55,6 @@ void TankWidget::draw()
 
     av=_x+_size_x/2+ix;
     ev=_y-iy-20;
-
-    if(vege==true){
-        if(ki==1){
-            gout<<move_to(300,300)<<color(0,0,0)<<text("Az elsõ játékos nyert!!!:)");
-        }
-        else{
-            gout<<move_to(300,300)<<color(0,0,0)<<text("A második játékos nyert!!!:)");
-        }
-    }
-
 
 }
 
@@ -140,7 +130,20 @@ void TankWidget::handle(event ev)
                 xx=ax+u*timerr-f_x*timerr*timerr;
                 yy=ay-w*timerr+(grav/2)*timerr*timerr+f_y*timerr*timerr;
 
-                if(yy<_y+20 && yy>0 && xx>0 && xx <900){
+                //cout<<_x<<" "<<_size_x<<endl;
+
+                if(xx>=800 && xx<=870 && yy>=370){
+                    cout<<_ki<<endl;
+                    _parent->vege();
+                    _parent->nyertesjatekos("Elso tank");
+                }
+                if(xx>=30 && xx<=100 && yy>=370){
+                    cout<<_ki<<endl;
+                    _parent->vege();
+                    _parent->nyertesjatekos("Masodik tank");
+                }
+
+                if(yy<_y+20 && yy>95 && xx>0 && xx <900){
                     gout<<move_to(px,py)<<color(153, 204, 255)<<box(10,10);
 
                     gout<<move_to(xx,yy)<<color(77, 77, 51)<<box(10,10);
@@ -151,24 +154,45 @@ void TankWidget::handle(event ev)
                     t=true;
                     gin.timer(0);
                     _ki=_parent->getkijon();
+                    _parent->lepes();
+                }
+              /*  if(xx>=800 && xx<=870 && yy>=370 && _ki=="Elso tank"){
+                        cout<<"hahao"<<endl;
+                    _parent->vege();
+                     t=true;
+                    gin.timer(0);
                     _parent->lepes_tortent();
                 }
+                if( _ki=="Masodik tank" && (xx>=30 && xx<=100 && yy>=370) || (xx>_x+_size_x/2 && yy>_y-20 && xx<_x+_size_x/2+ix && yy<_y-iy-20)){                    cout<<"YES"<<endl;
+                    cout<<"hahao2"<<endl;
+                    _parent->vege();
+                     t=true;
+                    gin.timer(0);
+                    _parent->lepes_tortent();
+                }*/
 
-                if(xx>=800 && xx<=870 && yy>=350){
-                    ki=1;
-                    vege=true;
-                }
-                if(xx>=30 && xx<=100 && yy>=350){
-                    ki=2;
-                    vege=true;
 
-                }
+
+
             }
 
         }
     }
 
 
+}
+
+double TankWidget::tx(){
+    return _x;
+}
+double TankWidget::sx(){
+    return _size_x;
+}
+double TankWidget::ty(){
+    return _y;
+}
+double TankWidget::sy(){
+    return _size_y;
 }
 
 string TankWidget::getszoveg()

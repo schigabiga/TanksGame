@@ -2,7 +2,7 @@
 #include "graphics.hpp"
 #include "Window.hpp"
 using namespace genv;
-
+using namespace std;//of
 void Window::event_loop()
 {
 	genv::event ev;

@@ -13,12 +13,15 @@ class JatekMester : public Window
 protected:
     string kijon;
     bool vege_a_jateknak;
+    string nyertes;
     TextBox *s1;
 public:
     JatekMester();
     //
-    void lepes_tortent();
+    void lepes();
 	string getkijon();
+	void vege();
+	void nyertesjatekos(string n);
 	//
     virtual void event(string es);
 };
