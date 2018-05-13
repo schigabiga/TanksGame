@@ -185,7 +185,7 @@
 	<cstdlib>
 	<vector>
 
-1526233076 source:c:\users\boldizsár\documents\github\tankwgame\map.cpp
+1526243492 source:c:\users\boldizsár\documents\github\tankwgame\map.cpp
 	"map.hpp"
 	<ctime>
 
@@ -209,7 +209,7 @@
 1526233553 c:\users\boldizsár\documents\github\tankwgame\pushbutton.hpp
 	"widgets.hpp"
 
-1526242268 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
+1526244749 source:c:\users\boldizsár\documents\github\tankwgame\tankwidget.cpp
 	"TankWidget.hpp"
 	"JatekMester.hpp"
 	<math.h>
@@ -268,7 +268,7 @@
 	"graphics.hpp"
 	"Window.hpp"
 
-1526241914 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
+1526242366 source:c:\users\boldizsár\documents\github\tankwgame\jatekmester.cpp
 	"JatekMester.hpp"
 	"graphics.hpp"
 	"TextBox.hpp"

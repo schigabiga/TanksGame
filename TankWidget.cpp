@@ -139,10 +139,12 @@ void TankWidget::handle(event ev)
                 yy=ay-w*timerr+(grav/2)*timerr*timerr+f_y*timerr*timerr;
 
                 if(xx>=900 && xx<=970 && yy>=_ipy){
+                    cout<<xx<<" "<<yy<<" "<<_ipy<<endl;
                     _parent->vege();
                     _parent->nyertesjatekos("Elso tank");
                 }
                 if(xx>=130 && xx<=200 && yy>=_ipy){
+                    cout<<xx<<" "<<yy<<" "<<_ipy<<endl;
                     _parent->vege();
                     _parent->nyertesjatekos("Masodik tank");
                 }

@@ -29,6 +29,7 @@ void Map::handle(event ev)
         _checked = !_checked;
     }
 }
+
 bool Map::is_checked()
 {
     return _checked;
